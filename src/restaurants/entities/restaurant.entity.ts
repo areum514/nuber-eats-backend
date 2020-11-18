@@ -4,6 +4,14 @@ import { Field, ObjectType } from "@nestjs/graphql";
 export class Restaurant { 
   @Field(type => String)
   name: string;
-  @Field(type => Boolean, {nullable:true})
-  isGood?: Boolean;
+
+  @Field(type => Boolean)
+  isVegan: Boolean;
+
+  @Field(type => String)
+  address: string;
+  
+  @Field(type => String)
+  ownerName: string;
+
 }
